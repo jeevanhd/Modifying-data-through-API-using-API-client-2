@@ -1,16 +1,19 @@
+# Modifying Data using Apis
+
 You have been hired by a local restaurant to **extend** the backend system for managing their online menu. In addition to creating and reading menu items, the restaurant needs the following functionality:
 
 - **Update existing menu items** in the database.
 - **Delete menu items** that are no longer needed or are discontinued.
 
-### Instructions
+## Instructions
 
-### Initialize the Project:
+### Initialize the Project
 
 Basic express template was given  
 You need to install all the necessary packages required for the task.
 
-### Define a MenuItem schema that includes:
+### Define a MenuItem schema that includes
+
 - name (String, required)
 - description (String)
 - price (Number, required)
@@ -18,29 +21,30 @@ You need to install all the necessary packages required for the task.
 ### MongoDB Atlas Connection
 
 - Create a MongoDB Atlas account and set up a free cluster.
-Use Mongoose to connect your Express server to the MongoDB Atlas cluster.
+  Use Mongoose to connect your Express server to the MongoDB Atlas cluster.
 
+  **Implement Update & Delete**
 
- **Implement Update & Delete**  
-   - **PUT /menu/:id**: Updates an existing menu item.  
-     - Accepts `name`, `description`, and `price` (or any subset) in the request body.
-     - Responds with the updated object (or an error message if something goes wrong).
+  - **PUT /menu/id** Updates an existing menu item.
 
-   - **DELETE /menu/:id**: Deletes an existing menu item.  
-     - Responds with a success message if the item is deleted (or an error if the `id` is invalid or not found).
+    - Accepts `name`, `description`, and `price` (or any subset) in the request body.
+    - Responds with the updated object (or an error message if something goes wrong).
 
- **Error Handling & Validation**  
-   - Validate incoming data to ensure required fields are not empty.
-   - Respond with a descriptive error message if the item cannot be updated or deleted.
+  - **DELETE /menu/id** Deletes an existing menu item.
+    - Responds with a success message if the item is deleted (or an error if the `id` is invalid or not found).
 
- **Testing**  
-   - Use Postman (or a similar tool) to test:
-     - **PUT** requests to update an existing menu item.
-     - **DELETE** requests to remove a specific menu item.
+  **Error Handling & Validation**
 
+  - Validate incoming data to ensure required fields are not empty.
+  - Respond with a descriptive error message if the item cannot be updated or deleted.
 
+  **Testing**
 
-# **How to Fork and Set Up Your Repository**
+  - Use Postman (or a similar tool) to test
+    - **PUT** requests to update an existing menu item.
+    - **DELETE** requests to remove a specific menu item.
+
+## **How to Fork and Set Up Your Repository**
 
 ---
 
@@ -54,21 +58,28 @@ Use Mongoose to connect your Express server to the MongoDB Atlas cluster.
 
 ## **2. Clone the Repository to Your Personal GitHub**
 
-- After forking, you can download the project or push it directly to your personal GitHub repository:
-  - **Option 1: Download and Push**
+- After forking, you can download the project or push it directly to your personal GitHub repository
+
+  - **Option 1 Download and Push**
+
     1. Download the repository files from StackBlitz.
-    2. Open your terminal/command prompt, navigate to the project folder, and run:
+    2. Open your terminal/command prompt, navigate to the project folder, and run
+
        ```bash
        git init
        git remote add origin <your_github_repo_url>
        ```
+
        Replace `<your_github_repo_url>` with your personal GitHub repository URL.
+
     3. Commit and push the files to your GitHub repository:
+
        ```bash
        git add .
        git commit -m "Completed the assignment"
        git push -u origin main
        ```
+
   - **Option 2: Push Directly**
     1. Use the **Push to GitHub** option in StackBlitz to directly connect and push the repository to your GitHub account.
 
